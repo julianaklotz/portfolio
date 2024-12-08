@@ -1,0 +1,456 @@
+/*Importação de Fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+/*Estilização inicial*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*Estilo do body*/
+body{
+    height: 100vh;
+    background-color: #272727;
+}
+
+li{
+    list-style: none;
+}
+
+hr{
+    border: 1px #f1f1f1;
+}
+
+header{
+    position: relative;
+}
+
+/*Estilização do menu*/
+.navbar{
+    position: fixed;
+    top: 0; /* Fixado no topo */    
+    width: 100%;
+    height: 100px;
+    max-width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 48px;
+    background-color: #272727;
+}
+
+.logo{
+    padding: 0 2rem;
+    transition: all 0.3s ease;
+}
+
+.logo:hover{
+    transform: scale(1.04);
+}
+.navbar .logo a{
+    color: #FFFFFF;
+    font-family: "Oswald", serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.navbar .links{
+    display: flex;
+    padding-right: 150px;
+    gap: 16px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar .links a{
+    color: #FFFFFF;
+}
+
+.navbar .links li{
+    margin-left: 16px;
+    transition: all 0.3s ease;
+}
+
+.navbar .links li:hover{
+    transform: scale(1.09);
+}
+
+main{
+    margin: 0 48px;
+    padding-top: 120px;
+}
+
+/*Estilização da primeira seção*/
+.secao1 {
+    display: flex; /* Layout flexível para lado-esquerdo e lado-direito */
+    gap: 20px; /* Espaçamento entre os lados */
+    align-items: stretch;
+    padding: 20px;
+}
+
+/* Lado esquerdo */
+.lado-esquerdo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d9d9d9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.imagem-perfil {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    flex: 1;
+    object-fit: cover;
+}
+
+.meu-nome {
+    font-family: 'Oswald', serif;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 16px 32;
+    color: #272727;
+    text-align: left;
+    width: 100%;
+}
+
+
+.location-container,
+.graduation-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 0;
+    width: 100%;
+    justify-content: flex-start;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #272727;
+    text-align: left;
+}
+
+.location,
+.graduation {
+    width: 18px;
+    height: 18px;
+}
+
+/* Lado direito */
+.lado-direito {
+    flex: 2; /*Faz o lado direito ocupar mais espaço */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/*Títulos*/
+.estudante,
+.tecnologia {
+    font-family: 'Oswald', serif;
+    font-size: 96px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+}
+.estudante{
+    color: #F1F1F1;
+}
+.tecnologia {
+    color: #5A5A5A;
+    margin-bottom: 10px;
+}
+
+/*Blocos*/
+.blocos-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: stretch;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.texto{
+    text-align: left;
+}
+
+.bloco-laranja,
+.bloco-verde {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bloco-laranja {
+    background-color: #ff6600;
+    color: #ffffff;
+}
+
+.bloco-verde {
+    background-color: #00cc66;
+}
+
+hr {
+    border: none; 
+    height: 2px;
+    background-color: #ffffff;
+    margin: 20px 0;
+    width: 100%;
+}
+
+/*Estilização seção 2*/
+.secao2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+    text-align: center;
+}
+
+.titulo-secao{
+    font-family: 'Oswald', serif;
+    font-weight: 700;
+    font-size: 96px;
+    color: #d9d9d9;
+    text-align: center;
+}
+
+.blocos-formacao,
+.blocos-cursos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 30px;
+}
+
+.itens-formacao,
+.itens-cursos {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 800px;
+}
+
+.itens-formacao li,
+.itens-cursos li {
+    background-color: #232323;
+    color: #d9d9d9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 
+        inset -4px -4px  5px 2px rgba(0, 0, 0, 0.25),
+        inset 2px 2px 5px 2px rgba(255, 255, 255, 0.25);
+    font-family: 'Poppins',sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 32px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Corrige o último item para remover o espaçamento extra */
+li:last-child {
+    margin-bottom: 0;
+}
+
+.secao2 h3 {
+    font-family: 'Oswald', serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.imagens-sup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.imagens-sup img{
+    transition: transform 0.3s ease;
+}
+
+.imagem-inf{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 50px;
+    transition: transform 0.3s ease;
+}
+
+.imagem1:hover,
+.imagem2:hover,
+.imagem-inf:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
+.links-contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+}
+
+
+.links-contato li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.links-contato img {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.links-contato img:hover {
+    transform: scale(1.1);
+}
+
+/*Estilização Formulário*/
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}
+
+/* Estilo do formulário */
+form {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 30px;
+}
+
+/* Estilo dos campos de entrada */
+form input {
+    background-color: #2a2a2a;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.6);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+form input::placeholder {
+    color: #888888;
+}
+
+form input:focus {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/*Estilização do botão*/
+form button {
+    background-color: #333333;
+    color: #d9d9d9;
+    border: none;
+    border-radius: 13px;
+    padding: 16px 0;
+    width: 100%;
+    max-width: 200px;
+    font-family: 'Oswald', serif;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    margin: 10px auto;
+    display: block;
+}
+
+
+form button:hover {
+    background-color: #444444;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .secao1 {
+        flex-direction: column; /* Torna os itens verticais em telas pequenas */
+    }
+
+    .lado-esquerdo,
+    .lado-direito {
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    .blocos-container {
+        flex-direction: column; /* Alinha os blocos verticalmente */
+    }
+
+    .itens-formacao,
+    .itens-cursos {
+        max-width: 90%; /* Reduz a largura para telas menores */
+    }
+
+    .itens-formacao li,
+    .itens-cursos li {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+        padding: 10px 15px; /* Ajusta o espaçamento interno */
+        margin-bottom: 32px; /* Mantém o espaçamento responsivo */
+    }
+
+    .titulo-secao {
+        font-size: 28px; /* Ajusta o tamanho do título */
+    }
+}
+
+
+
